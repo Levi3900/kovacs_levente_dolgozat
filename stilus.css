@@ -36,6 +36,7 @@ nav {
 nav li {
     list-style: none;
     padding: 5px 10px;
+    margin-left: -40px; 
 }
 
 nav li:hover {
@@ -101,5 +102,9 @@ img {
         "n"
         "a"
         "f";
+    }
+
+    .kepek_grid {
+        grid-template-columns: 1fr;
     }
 }
