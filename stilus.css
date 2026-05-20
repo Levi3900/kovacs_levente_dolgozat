@@ -16,33 +16,63 @@ main {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "h h h"
-    "n a a"
-    "f f f";
+    "h h h h"
+    "n a a a"
+    "f f f f";
 }
 
 header {
-    display: grid;
-    grid-area: "h";
+    grid-area: h;
+    background-color: gray;
 }
 
 nav {
-    display: grid;
-    grid-area: "n";
+    background-color: lightgray;
+    grid-area: n;
 }
 
+nav li {
+    list-style: none;
+    padding: 5px 10px;
+}
+
+nav li:hover {
+    background-color: rgb(110, 110, 110);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
 article {
-    display: grid;
-    grid-area: "a";
+    background-color: rgb(233, 232, 232);
+    grid-area: a;
     padding: 3px;
+}
+
+.kepek_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
 }
 
 footer {
     display: grid;
-    grid-area: "f";
-    margin: auto;
+    grid-area: f;
+    text-align: center;
+    color: white;
+    background-color: gray;
+}
+
+h1 {
+    padding: 5px 10px;
+    color: white;
 }
 
 h2 {
@@ -56,5 +86,20 @@ img {
     padding: 5px;
     border: lightgray 1px solid;
     border-radius: 15px;
+}
 
+@media screen and (max-width: 600px) {
+    body {
+        font-size: calc(10px + 2vw);
+    }
+
+    main {
+        max-width: 600px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "f";
+    }
 }
